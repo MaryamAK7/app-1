@@ -1,5 +1,16 @@
 .App {
   text-align: center;
+  overflow-x: hidden;
+  height: 100vh;
+  background-image: url('./sky.jpg');
+  background-size: cover;
+}
+.AppN {
+  text-align: center;
+  overflow-x: hidden;
+  height: 100vh;
+  background-image: url('./night.jpg');
+  background-size: cover;
 }
 
 .App-logo {

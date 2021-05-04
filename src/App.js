@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useContext}  from 'react'
+import NavBar from './Components/NavBar/NavBar'
+import Footer from './Components/Footer/Footer'
+import Header from './Components/Header/Header'
+import Map from './Components/Map/Map'
+import Weather from './Components/Weather/Weather'
+import {CountryContext} from './Context/CountryContext'
+import "./App.css";
 
 function App() {
+ const [state,]= useContext(CountryContext)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={state.time === 'day' ? "App" : "AppN"}>
+      <NavBar />
+      <Header />
+      <div className='flex'>
+      <Weather />
+      <Map/>
+      </div> 
+      <Footer />
     </div>
   );
 }
