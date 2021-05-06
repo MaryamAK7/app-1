@@ -8,7 +8,7 @@ import ReactMapGl, {
   ScaleControl,
 } from "react-map-gl";
 import Data from "../../Data/countries.json";
-import markr from "../Weather/images/markr.png";
+import maps from './maps.svg'
 
 export default function Map() {
   const [viewport, setViewport] = useState({
@@ -57,7 +57,7 @@ export default function Map() {
                 dispatch({type: 'SET_country', payload: res})
               }}
             >
-              <img src={markr} alt="" className="w-4 " />
+              <img src={maps} alt="" className="w-4 " />
             </button>
           </Marker>
         ))}
